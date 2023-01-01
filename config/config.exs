@@ -32,13 +32,15 @@ config :spur_cross_players, SpurCrossPlayersWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :spur_cross_players, SpurCrossPlayers.Mailer,
-  adapter: Bamboo.MailgunAdapter,
-  api_key: System.get_env("MAILGUN_PRIVATE_API_KEY"),
-  domain: System.get_env("MAILGUN_DOMAIN"),
-  hackney_opts: [
-    recv_timeout: :timer.minutes(1)
-  ]
+config :spur_cross_players, SpurCrossPlayers.Mailer, adapter: Bamboo.LocalAdapter
+
+# config :spur_cross_players, SpurCrossPlayers.Mailer,
+#   adapter: Bamboo.MailgunAdapter,
+#   api_key: System.get_env("MAILGUN_PRIVATE_API_KEY"),
+#   domain: System.get_env("MAILGUN_DOMAIN"),
+#   hackney_opts: [
+#     recv_timeout: :timer.minutes(1)
+#   ]
 
 # Configure esbuild (the version is required)
 config :esbuild,

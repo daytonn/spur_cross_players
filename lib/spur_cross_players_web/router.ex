@@ -44,15 +44,15 @@ defmodule SpurCrossPlayersWeb.Router do
     end
   end
 
-  # Enables the Swoosh mailbox preview in development.
+  # Enables the mailbox preview in development.
   #
   # Note that preview only shows emails that were sent by the same
   # node running the Phoenix server.
   if Mix.env() == :dev do
+    forward "/mailbox", Bamboo.SentEmailViewerPlug
+
     scope "/dev" do
       pipe_through :browser
-
-      forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end
 
