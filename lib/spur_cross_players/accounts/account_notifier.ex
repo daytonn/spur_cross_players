@@ -3,12 +3,13 @@ defmodule SpurCrossPlayers.Accounts.AccountNotifier do
 
   alias SpurCrossPlayers.Mailer
 
-  # Delivers the email using the application mailer.
+  @default_sender "Spur Cross Players<no-reply@spurcrossplayers.com>"
+
   defp deliver(recipient, subject, body) do
     email =
       new_email()
+      |> from(@default_sender)
       |> to(recipient)
-      |> from({"SpurCrossPlayers", "support@spurcrossplayers.com"})
       |> subject(subject)
       |> text_body(body)
 
