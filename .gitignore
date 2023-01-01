@@ -32,3 +32,4 @@ spur_cross_players-*.tar
 npm-debug.log
 /assets/node_modules/
 
+rel/

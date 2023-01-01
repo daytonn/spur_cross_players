@@ -10,6 +10,16 @@ config :spur_cross_players, SpurCrossPlayers.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
+config :sentry,
+  dsn: System.get_env("SENTRY_DSN"),
+  environment_name: :dev,
+  enable_source_code_context: true,
+  root_source_code_path: File.cwd!(),
+  tags: %{
+    env: "development"
+  },
+  included_environments: [:dev]
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

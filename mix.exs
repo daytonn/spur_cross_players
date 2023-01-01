@@ -42,6 +42,7 @@ defmodule SpurCrossPlayers.MixProject do
       {:firebird, github: "daytonn/firebird"},
       {:floki, ">= 0.30.0", only: :test},
       {:gettext, "~> 0.18"},
+      {:hackney, "~> 1.8"},
       {:jason, "~> 1.2"},
       {:phoenix, "~> 1.6.15"},
       {:phoenix_ecto, "~> 4.4"},
@@ -51,6 +52,7 @@ defmodule SpurCrossPlayers.MixProject do
       {:phoenix_live_view, "~> 0.17.5"},
       {:plug_cowboy, "~> 2.5"},
       {:postgrex, ">= 0.0.0"},
+      {:sentry, "~> 8.0"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"}
     ]

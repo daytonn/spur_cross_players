@@ -1,0 +1,64 @@
+# flyctl launch added from .gitignore
+# The directory Mix will write compiled artifacts to.
+_build
+
+# If you run "mix test --cover", coverage assets end up here.
+cover
+
+# The directory Mix downloads your dependencies sources to.
+deps
+
+# Where 3rd-party dependencies like ExDoc output generated docs.
+doc
+
+# Ignore .fetch files in case you like to edit your project deps locally.
+.fetch
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+**/erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+**/*.ez
+
+# Ignore package tarball (built via "mix hex.build").
+**/spur_cross_players-*.tar
+
+# Ignore assets that are produced by build tools.
+priv/static/assets
+
+# Ignore digested assets cache.
+priv/static/cache_manifest.json
+
+# In case you use Node.js/npm, you want to ignore these.
+**/npm-debug.log
+assets/node_modules
+
+
+# flyctl launch added from deps/firebird/.gitignore
+# The directory Mix will write compiled artifacts to.
+deps/firebird/_build
+
+# If you run "mix test --cover", coverage assets end up here.
+deps/firebird/cover
+
+# The directory Mix downloads your dependencies sources to.
+deps/firebird/deps
+
+# Where third-party dependencies like ExDoc output generated docs.
+deps/firebird/doc
+
+# Ignore .fetch files in case you like to edit your project deps locally.
+deps/firebird/.fetch
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+deps/firebird/**/erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+deps/firebird/**/*.ez
+
+# Ignore package tarball (built via "mix hex.build").
+deps/firebird/**/firebird-*.tar
+
+
+# Temporary files for e.g. tests
+deps/firebird/tmp
