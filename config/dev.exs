@@ -5,10 +5,7 @@ config :spur_cross_players, SpurCrossPlayers.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "scpc_dev",
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+  database: "spur_cross_players_dev",
 
 config :sentry,
   dsn: System.get_env("SENTRY_DSN"),

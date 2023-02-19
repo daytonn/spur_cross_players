@@ -44,7 +44,6 @@ defmodule SpurCrossPlayersWeb.Router do
     end
   end
 
-  # Enables the mailbox preview in development.
   #
   # Note that preview only shows emails that were sent by the same
   # node running the Phoenix server.

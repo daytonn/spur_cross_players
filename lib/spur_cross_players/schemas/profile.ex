@@ -2,9 +2,13 @@ defmodule SpurCrossPlayers.Schemas.Profile do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
+
   schema "profiles" do
-    field :first_name, :string
-    field :last_name, :string
+    field :firstname, :string
+    field :lastname, :string
+    field :birthday, :date
     field :phone_number, :string
 
     timestamps()
@@ -13,7 +17,7 @@ defmodule SpurCrossPlayers.Schemas.Profile do
   @doc false
   def changeset(profile, attrs) do
     profile
-    |> cast(attrs, [:first_name, :last_name, :phone_number])
-    |> validate_required([:first_name, :last_name, :phone_number])
+    |> cast(attrs, [:firstname, :lastname, :birthday, :phone_number])
+    |> validate_required([:firstname, :lastname, :birthday, :phone_number])
   end
 end
